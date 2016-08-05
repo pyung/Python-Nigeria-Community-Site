@@ -1,3 +1,33 @@
+/*new stuff */
+#landing {
+  background: url('/images/bg1.png') fixed;
+  background-size: cover;
+	background-position: center;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+.jumbotron {
+  color: white;
+  background: transparent;
+  height: 100%;
+}
+/* BUTTON */
+.cta{
+  padding: 15px;
+  background-color: transparent;
+  border: 2px solid green;
+}
+.cta a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* end newStuff/
+
+
 .demo-card-wide > .mdl-card__title {
     color: #fff;
     height: 176px;
