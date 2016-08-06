@@ -1,4 +1,5 @@
-/*new stuff */
+/* new stuff */
+/* landing section */
 #landing {
   background: url('/images/bg1.png') fixed;
   background-size: cover;
@@ -6,26 +7,42 @@
   height: 100vh;
   margin: 0px;
   padding: 0px;
-  color: white;
 }
 .jumbotron {
+	padding-top: 20vh;
   color: white;
   background: transparent;
-  height: 100%;
 }
-/* BUTTON */
+.jumbotron p{
+	font-size: 1em;
+	color: white;
+}
+.py-logo{
+	padding: 0;
+}
+/* cta button */
 .cta{
-  padding: 15px;
+  padding: 5px 25px;
   background-color: transparent;
-  border: 2px solid green;
+  border: 2px solid white;
+	color: white;
 }
 .cta a {
+	color: white;
   text-decoration: none;
   font-size: 18px;
-  color: #fff;
 }
-
-/* end newStuff/
+.cta a:hover {
+	color: black;
+}
+.cta:hover {
+	color: black;
+	background-color: white;
+  transition: 0.4s;
+}
+/* end cta */
+/* end landing */
+/* end newStuff*/
 
 
 .demo-card-wide > .mdl-card__title {
@@ -93,14 +110,6 @@ background: #563d7c;
     left: 16em;
     background: rgba(28,50,63,.8);
 }
-h1 {
-    font-family: 'Open Sans',sans-serif;
-    color: rgba(237, 245, 235, 0.93) !important;
-    font-size: 50px;
-    line-height: 1;
-    font-weight: 700;
-    letter-spacing: -2px;
-  }
 .social-facebook{
 
 }
@@ -108,6 +117,7 @@ h1 {
     width: 100%;
     position: relative;
     margin-bottom: 3.6em;
+	  background-color: transparent;
 }
 .menu_area {
     /*position: absolute;
@@ -189,12 +199,7 @@ html, body {
 #team h2 {
     font-size: 25px !important;
 }
-h1, .alpha, h2, .beta, h3, .gamma, h4, .delta, h5, .epsilon, h6, .zeta, .milli, .footerinfo__text, .micro {
-    font-family: "edmondsansbold", sans-serif;
-    font-weight: normal;
-    color: #313334;
-    margin: 0;
-}
+
 .bk365ysdjj1{
     background:  rgb(55, 64, 65);
 }
@@ -1079,14 +1084,7 @@ Main components
     left: 0em;
     background: rgba(28,50,63,.8);
 }
-h1 {
-    font-family: 'Open Sans',sans-serif;
-    color: rgba(237, 245, 235, 0.93) !important;
-    font-size: 25px;
-    line-height: 1;
-    font-weight: 700;
-    letter-spacing: -2px;
-}
+
 .heading_1 .main_title {
     font-size: 30px;
     font-weight: 300;
