@@ -11,7 +11,7 @@ Ensure your have `node >= 4` on your system.
 Start up a local server 
 <p>If you have python on your system</p>
     
-    npm run start 8002
+    npm run start
 
 Edit this line in the `gulpfile.js` to point to the local server url setup
 
