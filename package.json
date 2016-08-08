@@ -7,7 +7,7 @@
   },
   "main": "js/index.js",
   "scripts": {
-    "start": "python -m SimpleHTTPServer"
+    "start": "python -m SimpleHTTPServer 8002"
   },
   "author": "Python Community",
   "license": "Not open source",
