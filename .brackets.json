@@ -1,0 +1,16 @@
+{
+    "path": {
+        "assets/sass/all.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "imagePath": null,
+                "sourceComments": null,
+                "outputStyle": "nested",
+				"minified": true
+            },
+            "linting.collapsed": true,
+            "brackets-git.gitPath": "C:\\Program Files (x86)\\Git\\cmd\\git.exe"
+        }
+    }
+}

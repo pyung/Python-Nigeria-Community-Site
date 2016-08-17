@@ -1,0 +1,156 @@
+/* body / generic */
+a{
+	color: white;
+}
+.greenText{
+	color: #4BF991;
+}
+
+/* end body / generic */
+
+/* landing */
+
+#landing{
+	height: 100vh;
+	background: url(../images/bg1.png) fixed;
+	background-size: cover;
+	background-position: center;
+}
+.jumbotron{
+	margin-top: 50px;
+	color: white;
+	background-color: transparent
+}
+@media screen and (max-width: 320px){
+.jumbotron h1{
+	letter-spacing: 15px;
+}
+}
+@media screen and (min-width: 321px)
+			and (max-width: 768px){
+.jumbotron{
+	margin-top: 30px;
+	}
+.jumbotron h1{
+	letter-spacing: 25px;
+}
+}
+@media screen and (min-width: 769px){
+.jumbotron{
+	padding-top: 30px;
+	}
+.jumbotron h1{
+	letter-spacing: 35px;
+}
+}
+.siteBtn{
+	width: 200px;
+	color: white;
+	font-size: 1.3em;
+	background-color: transparent;
+	padding: 20px 15px;
+	border: 1px solid #4BF991;
+	border-radius: 10px;
+}
+.siteBtn:hover{
+	transition: 0.6s;
+	color: #4BF991;
+	border: 1px solid white;
+}
+/* end landing */
+
+/* about */
+
+#about{
+	background-color: #4BF991;
+}
+
+/* end about */
+
+/* another */
+
+#another{
+	background-color: gray;
+}
+
+/* end another */
+
+/* navbar */
+ul.nav{
+	padding-top: 30px;
+}
+.navbar-brand{
+	height: 110px;
+}
+.inline{
+	float: left
+}
+.name{
+	margin-left: 20px;
+	margin-top: 17px;
+}
+.inline p{
+	color: white
+}
+.navbar-default .navbar-toggle .icon-bar{
+	margin: 10px 0;
+	width: 30px;
+	height: 3px;
+}
+.navbar-toggle{
+	margin-top: 20px;
+	border: 0;
+}
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+}
+.nav-items > li > a:active {
+    border-bottom: 1.5px solid #4BF991;
+}
+.nav-items > li > a:hover {
+  border-bottom: 1.5px solid white;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: white;
+}
+.navbar-default{
+	background-color: transparent;
+	height: 110px;
+	border: 0;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: 0;
+}
+/* NAVBAR HARMBURGER */
+.navbar-default .navbar-toggle .icon-bar {
+ background-color: #fff; 
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	  top: 1px;
+}
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  	top: 2px;
+}
+.navbar-toggle .icon-bar {
+	  position: relative;
+	  transition: all 500ms ease-in-out;
+}
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+	  top: 6px;
+	  transform: rotate(45deg);
+}
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+	  background-color: transparent;
+}
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+	  top: -6px;
+	  transform: rotate(-45deg);
+}
+
+/* end navbar */
