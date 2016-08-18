@@ -115,104 +115,105 @@ a {
 /* line 129, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 #join {
   color: white;
-  background-color: #343434; }
+  background-image: url(../../images/contact%20mesh.svg);
+  background-size: cover; }
 
 /* end join */
 /* navbar */
-/* line 137, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 138, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 ul.nav {
   padding-top: 30px; }
 
-/* line 140, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 141, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-brand {
   height: 110px; }
 
-/* line 143, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 144, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .inline {
   float: left; }
 
-/* line 146, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 147, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .name {
   margin-left: 20px;
   margin-top: 17px; }
 
-/* line 150, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 151, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .inline p {
   color: white; }
 
-/* line 153, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 154, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-default .navbar-toggle .icon-bar {
   margin: 10px 0;
   width: 30px;
   height: 3px; }
 
-/* line 158, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 159, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-toggle {
   margin-top: 20px;
   border: 0; }
 
-/* line 162, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 163, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-default .navbar-nav > li > a {
   color: white; }
 
-/* line 165, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 166, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-default .navbar-nav > li > a:hover {
   color: white; }
 
-/* line 168, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 169, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .nav-items > li > a:active {
   border-bottom: 1.5px solid #4BF991; }
 
-/* line 171, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 172, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .nav-items > li > a:hover {
   border-bottom: 1.5px solid white; }
 
-/* line 174, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 175, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
   color: white; }
 
-/* line 177, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 178, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-default {
   background-color: transparent;
   height: 110px;
   border: 0; }
 
-/* line 182, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 183, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border: 0; }
 
 /* NAVBAR HARMBURGER */
-/* line 186, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 187, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff; }
 
-/* line 189, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 190, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: transparent; }
 
-/* line 192, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 193, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-toggle .icon-bar:nth-of-type(2) {
   top: 1px; }
 
-/* line 195, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 196, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-toggle .icon-bar:nth-of-type(3) {
   top: 2px; }
 
-/* line 198, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 199, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-toggle .icon-bar {
   position: relative;
   transition: all 500ms ease-in-out; }
 
-/* line 202, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 203, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-toggle.active .icon-bar:nth-of-type(1) {
   top: 6px;
   transform: rotate(45deg); }
 
-/* line 206, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 207, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-toggle.active .icon-bar:nth-of-type(2) {
   background-color: transparent; }
 
-/* line 209, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
+/* line 210, A:/PROGRAMMING/GITHUB/community-site/assets/sass/3-pages/index.scss */
 .navbar-toggle.active .icon-bar:nth-of-type(3) {
   top: -6px;
   transform: rotate(-45deg); }
