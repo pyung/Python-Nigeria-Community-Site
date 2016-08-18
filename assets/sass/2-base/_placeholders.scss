@@ -1,4 +1,6 @@
 $green: #4BF991;
+$darkGreen: $green * 0.5;
+$speed : 0.7s;
 
 %siteBtn{
 	color: white;
@@ -8,4 +10,8 @@ $green: #4BF991;
 	border: 1px solid #4BF991;
 	border-radius: 10px;
 	transition: 0.7s;
+}
+%siteBtn:hover{
+	color: #4BF991;
+	border: 1px solid white;
 }

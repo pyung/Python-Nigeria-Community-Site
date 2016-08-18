@@ -1,3 +1,8 @@
+$green: #4BF991;
+$darkGreen: $green * 0.5;
+$speed : 0.7s;
+
+
 /* body / generic */
 a{
 	color: white;
@@ -17,63 +22,123 @@ a{
 	background-position: center;
 }
 .jumbotron{
-	margin-top: 50px;
+	padding-top: 10vh;
 	color: white;
 	background-color: transparent
 }
 @media screen and (max-width: 320px){
-.jumbotron h1{
-	letter-spacing: 15px;
+	.jumbotron{
+			padding-top: 10px;
+			
+			h1{
+			letter-spacing: 15px;
+			}
 }
 }
 @media screen and (min-width: 321px)
-			and (max-width: 768px){
+			and (max-width: 425px){
 .jumbotron{
-	margin-top: 30px;
-	}
-.jumbotron h1{
-	letter-spacing: 25px;
+			padding-top: 5vh;
+		
+		  h1{
+			letter-spacing: 15px;
+			}
 }
 }
-@media screen and (min-width: 769px){
+@media screen and (min-width: 426px)
+			and (max-width: 1440px){
 .jumbotron{
-	padding-top: 30px;
-	}
-.jumbotron h1{
-	letter-spacing: 35px;
+			padding-top: 10vh;
+		
+		  h1{
+			letter-spacing: 20px;
+			}
+}
+}
+@media screen and (min-width: 1440px){
+.jumbotron{
+	padding-top: 15vh;
+		
+		h1{
+	letter-spacing: 20px;
+		}
 }
 }
 .siteBtn{
-	width: 200px;
-	color: white;
-	font-size: 1.3em;
-	background-color: transparent;
-	padding: 20px 15px;
-	border: 1px solid #4BF991;
-	border-radius: 10px;
+	@extend %siteBtn;
 }
-.siteBtn:hover{
-	transition: 0.6s;
-	color: #4BF991;
-	border: 1px solid white;
-}
+
 /* end landing */
 
 /* about */
 
 #about{
-	background-color: #4BF991;
-}
+	padding: 30px 20px;
+	
+	.central-content{
+		padding: 0 20px;
+	}
 
+	article{
+		padding: 30px 40px;
+		
+		header{
+			margin-bottom: 30px;
+		}
+		
+		p{
+			font-size: 1.3em;
+		}
+	}
+}
+.header-content{
+	text-align: center;
+	
+	.icon-wrap{
+		display: inline-block;
+		padding: 10px;		
+	}
+	h3{
+		padding: 0 30px;
+		display: inline-block;
+	}
+}
+.contentBtn{
+	@extend %siteBtn;
+	color: $darkGreen;
+	border-color: $darkGreen;
+	padding: 5px 25px;
+	float: right;
+	clear: both;
+}
 /* end about */
 
-/* another */
+/* join */
 
-#another{
-	background-color: gray;
+#join{
+	color: white;
+	background-image: url(../images/contact%20mesh.svg);
+	background-size: cover;
+	
+	.icons-wrap{
+		max-width: 700px;
+		margin: 70px auto 50px;
+		display: flex;
+		justify-content: center;
+		
+		.icon{
+			margin:0 40px;
+			transition: $speed;
+			
+			&:hover{
+				color: $green;
+			}
+		}
+	}
+	
 }
 
-/* end another */
+/* end join */
 
 /* navbar */
 ul.nav{
@@ -110,9 +175,19 @@ ul.nav{
 .nav-items > li > a:active {
     border-bottom: 1.5px solid #4BF991;
 }
-.nav-items > li > a:hover {
-  border-bottom: 1.5px solid white;
+.nav-items > li > a {
+	.underline-active{
+		padding-bottom: 5px;
+		border-bottom: 1.5px solid $green;
+	}
 }
+.nav-items > li > a:hover {
+	.underline{
+		padding-bottom: 5px;
+		border-bottom: 1.5px solid white;
+	}
+}
+
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: white;
 }
@@ -152,5 +227,8 @@ ul.nav{
 	  top: -6px;
 	  transform: rotate(-45deg);
 }
-
-/* end navbar */
+@media screen and (max-width: 768px){
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	background-color: #343434;
+}
+	}
