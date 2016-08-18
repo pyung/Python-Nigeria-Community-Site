@@ -1,5 +1,6 @@
 $green: #4BF991;
 $darkGreen: $green * 0.5;
+$speed : 0.7s;
 
 
 /* body / generic */
@@ -70,7 +71,7 @@ a{
 	padding: 15px 50px;
 	border: 1px solid #4BF991;
 	border-radius: 10px;
-	transition: 0.7s;
+	transition: $speed;
 }
 .siteBtn:hover{
 	color: #4BF991;
@@ -88,7 +89,7 @@ a{
 	}
 
 	article{
-		padding: 20px 40px;
+		padding: 30px 40px;
 		
 		header{
 			margin-bottom: 30px;
@@ -104,9 +105,7 @@ a{
 	
 	.icon-wrap{
 		display: inline-block;
-		padding: 10px;
-		border: 1px solid $darkGreen;
-		border-radius: 50%;
+		padding: 10px;		
 	}
 	h3{
 		padding: 0 30px;
@@ -118,9 +117,8 @@ a{
 	color: $darkGreen;
 	border-color: $darkGreen;
 	padding: 5px 25px;
-	margin: 10px 0;
 	float: right;
-	clear: left;
+	clear: both;
 }
 /* end about */
 
@@ -130,6 +128,23 @@ a{
 	color: white;
 	background-image: url(../../images/contact%20mesh.svg);
 	background-size: cover;
+	
+	.icons-wrap{
+		max-width: 700px;
+		margin: 50px auto 50px;
+		display: flex;
+		justify-content: center;
+		
+		.icon{
+			margin:0 40px;
+			transition: $speed;
+			
+			&:hover{
+				color: $green;
+			}
+		}
+	}
+	
 }
 
 /* end join */
