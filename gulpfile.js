@@ -24,7 +24,7 @@ let gulp = require('gulp'),
 // Relative paths function
 class pathsConfig {
   constructor(appName) {
-    this.app = '.';
+    this.app = 'assets';
     Object.assign(this, {
       app: this.app,
       templates: this.app + '',
@@ -45,7 +45,7 @@ console.log(paths)
 
 // Styles autoprefixing and minification
 gulp.task('styles', function() {
-  return gulp.src(paths.sass + '/project.scss')
+  return gulp.src(paths.sass + '/all.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(plumber()) // Checks for errors
     .pipe(autoprefixer({browsers: ['last 2 version']})) // Adds vendor prefixes
@@ -76,7 +76,7 @@ gulp.task('imgCompression', function() {
 gulp.task('browserSync', function() {
   browserSync.init(
       [paths.css + '/*.css', paths.js + '*.js', paths.templates + '/*.html'], {
-        proxy: '127.0.0.1:8002',
+        proxy: '127.0.0.1:8000',
       });
 });
 gulp.task('templates', function(){
