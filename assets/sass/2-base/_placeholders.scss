@@ -1,0 +1,17 @@
+$green: #4BF991;
+$darkGreen: $green * 0.5;
+$speed : 0.7s;
+
+%siteBtn{
+	color: white;
+	font-size: 1.3em;
+	background-color: transparent;
+	padding: 15px 50px;
+	border: 1px solid #4BF991;
+	border-radius: 10px;
+	transition: 0.7s;
+}
+%siteBtn:hover{
+	color: #4BF991;
+	border: 1px solid white;
+}

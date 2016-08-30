@@ -1,11 +1,14 @@
 materialize
 *~
+*.css.map
 *.swp
 *.pyc
 *.orig
-.hg
 *hgignore*
 *zedstate*
 *.sqlite
 .~lock*
 node_modules/
+
+.brackets.json
+.hg
