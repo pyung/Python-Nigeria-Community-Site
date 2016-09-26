@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>{% block title %}Welcome{% endblock title %}- Python Nigeria</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/static/css/all.css'|url }}">
+</head>
+
+<body>
+  <div {% block base_class %}id="landing"{% endblock %} >
+    <!-- nav section -->
+    <nav class="navbar {% block nav_class %}navbar-default{% endblock nav_class %}  ">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+          <a class="navbar-brand" href="{{'/'|url }}">
+            <div class="inline">
+              <img class="site-logo" alt="Python Nigeria" src="{{ '/static/images/logo.svg'|url }}">
+            </div>            
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right nav-items text-center">
+            {% for href, title in [ ['/#about', 'About'], ['/projects', 'Projects'], ['/coc', 'COC'], ['/constitution', 'Constitution'] ] %}
+              <li><a href="{{href|url}}"><span class="underline">{{title}}</span></a></li>            
+            {% endfor %}            
+          </ul>
+        </div>
+      </div>
+    </nav>    
+    {% block body %}{% endblock %}
+    <footer>
+      <div class="container">
+      &copy; Copyright 2016 by Python Nigeria Community
+      </div>
+    </footer>
+  </div>
+
+<!-- Scripts -->
+  <script src="{{ '/static/js/jquery-1.12.0.min.js'|url }} "></script>
+  <script src="{{ '/static/js/bootstrap.min.js'|url }}"></script>
+  
+  <script src="{{ '/static/js/main.js'|url }}"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+materialize
+*~
+*.css.map
+*.swp
+*.pyc
+*.orig
+*hgignore*
+*zedstate*
+*.sqlite
+.~lock*
+node_modules/
+
+.brackets.json
+.hg
+dist/

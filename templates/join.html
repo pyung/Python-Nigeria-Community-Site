@@ -1,0 +1,79 @@
+{% extends "page.html" %} 
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-8 col-xs-offset-0 col-xs-12">
+<div class="panel panel-primary">
+            <div class="panel-heading">{{this.title}}</div>
+            <div class="panel-body">
+                <form accept-charset="UTF-8" action="" class="simple_form"
+                    enctype="multipart/form-data" id="new_user_horizontal" method="post" novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group email required user_horizontal_email">
+                                <label class="email required control-label" for="user_horizontal_email">
+                                    <abbr title="required">*</abbr> First Name</label>
+                                <div>
+                                    <input class="string email required form-control" id="user_horizontal_email" name="user_horizontal[email]"
+                                        placeholder="First Name" type="text">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group email required user_horizontal_email">
+                                <label class="email required control-label" for="user_horizontal_email">
+                                    <abbr title="required">*</abbr> Last Name</label>
+                                <div>
+                                    <input class="string email required form-control" id="user_horizontal_email" name="user_horizontal[email]"
+                                        placeholder="Last Name" type="text">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="form-group email required user_horizontal_email">
+                        <label class="email required control-label" for="user_horizontal_email">
+                            <abbr title="required">*</abbr> Bio</label>
+                        <div>
+                            <textarea name="" id="" cols="20" rows="5" class="form-control"></textarea>
+                            <p class="help-block">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group email required user_horizontal_email">
+                        <label class="email required control-label" for="user_horizontal_email">
+                            <abbr title="required">*</abbr> Email</label>
+                        <div>
+                            <input class="string email required form-control" id="user_horizontal_email" name="user_horizontal[email]"
+                                placeholder="Email" type="email">
+                            <p class="help-block">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group check_boxes optional user_horizontal_choices">
+                        <label class="check_boxes optional control-label">Choices</label>
+                        <div>
+                            <div class="checkbox">
+                                <label for="slack">
+                                    <input class="check_boxes optional" id="slack" name="user_horizontal[choices][]" type="checkbox" value="Option one is this and that—be sure to include why it's great">Join the Python Nigeria Slack Community</label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="mail">
+                                    <input class="check_boxes optional" id="mail" name="user_horizontal[choices][]" type="checkbox" value="Option two can be something else and selecting it will deselect option one">Subscribe to our Mailing List</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center-block">
+                        <button class="btn btn-primary btn-lg">Join the community</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock body %}

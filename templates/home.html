@@ -1,0 +1,85 @@
+{% extends "page.html" %}
+{% block nav_class %}navbar-default{% endblock nav_class %}
+{% block base_class %}id="landing"{% endblock %}
+{% block body %}
+<!-- Container (Landing Section) -->
+<section class="container-fluid text-center">
+  <div class="jumbotron">
+    <h1 class="full">PYTHO<span class="greenText">N</span> <span class="greenText">N</span>IGERIA</h1>
+    <br/><br/>
+    <p>The Python Programming Language User Group in Nigeria.
+    </p>
+    <br/><br/>
+    <a href="https://py-slack-invite.herokuapp.com/" target="_blank">
+      <button class="siteBtn">JOIN US</button>
+    </a>
+  </div>
+</section>
+
+<!-- end langing bg image -->
+</div>
+
+
+<!-- about section -->
+<section id="about" class="container-fluid">
+  <div class="central-content">
+    <div class="row">
+      <article class="col-sm-6">
+        <header class="header-content">
+          <div class="icon-wrap">
+            <img class="header-icon" src="{{ 'static/images/pythonBlack.svg'|url}}" alt="About Python Nigeria" width="50px">
+            <h3><strong>ABOUT</strong></h3>
+          </div>
+        </header>
+        <p>{{this.about}}</p>
+      </article>
+      <article class="col-sm-6">
+        <header class="header-content">
+          <div class="icon-wrap">
+            <span><i class="fa fa-gear fa-2x icon"></i></span>
+          </div>
+          <h3><strong>PROJECTS</strong></h3>
+        </header>
+        <p>Here we highlight all the major projects the Python Nigeria community are a part of and supports. Please note that members who take part in these projects do so voluntarily without any remuneration. The community as a whole benefits and are proud of all the collective efforts and man hours put into such projects to make it a success fostering growth.</p>
+        <a href="{{'/projects'|url}}" class="contentBtn">View</a>
+      </article>
+    </div>
+    <div class="row">
+      <article class="col-sm-6">
+        <header class="header-content">
+          <div class="icon-wrap">
+            <span><i class="fa fa-newspaper-o fa-2x icon"></i></span>
+            <h3><strong>CODE OF CONDUCT</strong></h3>
+          </div>
+        </header>
+        <p>The Nigerian Python community is made up of members from around Nigeria with very diverse set of skills, personalities, cultures and experiences. It is through these differences that our community has experienced many successes and continued growth. When you're working with members of the community, we encourage you to follow these guidelines which help steer our interactions and strive to keep Python a positive, successful, and growing community.
+           A member of the Nigeria Python community is:...</p>
+        <a href="{{'/coc'|url}}" class="contentBtn">View</a>
+      </article>
+      <article class="col-sm-6">
+        <header class="header-content">
+          <div class="icon-wrap">
+            <span><i class="fa fa-book fa-2x icon"></i></span>
+            <h3><strong>CONSTITUTION</strong></h3>
+          </div>
+        </header>
+        <p>The Python Nigeria Community is governed by constitution. The details are as follows....</p>
+        <a href="{{'/constitution'|url}}" class="contentBtn">View</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- join section -->
+<section id="join" class="container-fluid">
+  <br><br>
+  <h3 class="text-center"><strong>JOIN US</strong></h3>
+  <article class="container icons-wrap">
+    <span><a href="mailto:pynigeria@gmail.com"><i class="fa fa-envelope fa-4x icon"></i></a></span>
+    <span><a href="https://py-slack-invite.herokuapp.com/"><i class="fa fa-slack fa-4x icon"></i></a></span>
+    <span><a href="https://github.com/pyung"><i class="fa fa-github fa-4x icon"></i></a></span>
+  </article>
+  <br><br><br><br>
+</section>
+
+{% endblock %}

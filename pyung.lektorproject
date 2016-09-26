@@ -1,0 +1,5 @@
+[project]
+name = pyung
+
+[servers.ghpages]
+target = ghpages://pyung/pyung.github.io
