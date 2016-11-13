@@ -6,11 +6,11 @@ This is a basic demo website that shows how to use Lektor for a basic
 website with some pages and a blog.
 ---
 about:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ...(line truncated)...
+
+The Python Users Nigeria Group (Python Nigeria) is a body that encompasses all friends of the Python programming language in the Nigerian environ. 
+
+The community is open to everyone at all levels. So whether you are resident in Nigeria or outside the country, an absolute beginner or a maestro, program in Python or other languages but have some interest in Python, our community will embrace you.
+
+We have an active Slack team, where we engage ourselves regularly. You can check out our Github page for projects we have or are working on.
 ---
-    
 _template: home.html
