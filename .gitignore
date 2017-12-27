@@ -309,3 +309,4 @@ python_nigeria_site/media/
 # See issue https://github.com/pydanny/cookiecutter-django/issues/1321
 !/compose/local/
 
+frontend/node_modules
