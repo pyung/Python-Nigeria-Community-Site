@@ -2,9 +2,11 @@
 
 ### Gulp & BrowserSync Section
 Ensure your have `node >= 4` on your system.
+Create a project directory and run the following commands in a terminal:
 
-    git clone <repo>
-    npm install -g gulp # if you haven't installed gulp
+    git clone https://github.com/pyung/Python-Nigeria-Community-Site.git pncs
+    npm install --global gulp-cli # if you haven't installed gulp
+    npm install --save-dev gulp	# Run this command in your project directory
     npm install -g browser-sync # if you haven't installed browser-sync
     npm install
 
