@@ -49,12 +49,15 @@ THIRD_PARTY_APPS = [
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+    'graphene_django',
 ]
 
 # Apps specific for this project go here.
 LOCAL_APPS = [
     # custom users app
     'python_nigeria_site.users.apps.UsersConfig',
+    'python_nigeria_site.store.apps.StoreConfig',
+    'python_nigeria_site.api.apps.ApiConfig'
     # Your stuff: custom apps go here
 ]
 
@@ -273,3 +276,6 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+GRAPHENE = {
+    'SCHEMA': 'python_nigeria_site.api.schema'
+}
