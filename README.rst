@@ -26,7 +26,7 @@ Setting up the repo for development
     
     $ python3 --version
     
-3. Install [docker](https://www.docker.com/get-docker) _(though optional, it is essential for ease in setting up the mail server)_ for your respective operating system
+3. Install ``docker``(https://www.docker.com/get-docker) (though optional, it is essential for ease in setting up the mail server) for your respective operating system
 4. Open a new directory and clone the project::
     
     $ git clone https://github.com/pyung/Python-Nigeria-Community-Site.git pncs
