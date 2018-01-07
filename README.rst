@@ -22,24 +22,24 @@ Moved to settings_.
 Setting up the repo for development
 -----------------------------------
 1. Ensure that you have Postgres installed on your system. Visit [Postgres Download Section](https://www.postgresql.org/download/) to download postgres for your respective operating system.
-2. Ensure you have `Python 3.6` installed by running the following in your terminal
-    ```
+2. Ensure you have `Python 3.6` installed by running the following in your terminal::
+    
     $ python3 --version
-    ```
+    
 3. Install [docker](https://www.docker.com/get-docker) _(though optional, it is essential for ease in setting up the mail server)_ for your respective operating system
-4. Open a new directory and clone the project
-    ```
+4. Open a new directory and clone the project::
+    
     $ git clone https://github.com/pyung/Python-Nigeria-Community-Site.git pncs
     # Ensure you switch to the `develop` branch
     $ git checkout develop
-    ```
-5. Create a virtual environment in the same directory as the root of the project
-    ```
+    
+5. Create a virtual environment in the same directory as the root of the project::
+    
     $ virtualenv -p `which python3.6` venv $ source venv/Scripts/activate # on Linux or Mac **source venv/bin/activate**
     $ pip install -r requirements/local.txt
-    ```
-6. Create a database for the application
-    ```
+    
+6. Create a database for the application::
+    
     $ docker-compose -f local.yml up -d postgres mailhog
 
     # Create a startup script file to load up all the environment variables that would be used
@@ -48,11 +48,11 @@ Setting up the repo for development
     # Run the .env script $ source .env
 
     # Migrate all the settings $ python manage.py migrate
-    ```
-7. Start the application
-    ```
+    
+7. Start the application::
+    
     $ python manage.py runserver
-    ```
+    
 
 
 Basic Commands
