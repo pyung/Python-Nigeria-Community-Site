@@ -18,43 +18,41 @@ Moved to settings_.
 
 .. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
 
+
 Setting up the repo for development
 -----------------------------------
 1. Ensure that you have Postgres installed on your system. Visit [Postgres Download Section](https://www.postgresql.org/download/) to download postgres for your respective operating system.
 2. Ensure you have `Python 3.6` installed by running the following in your terminal
-```
-$ python3 --version
-```
+    ```
+    $ python3 --version
+    ```
 3. Install [docker](https://www.docker.com/get-docker) _(though optional, it is essential for ease in setting up the mail server)_ for your respective operating system
 4. Open a new directory and clone the project
-```
-$ git clone https://github.com/pyung/Python-Nigeria-Community-Site.git pncs
-# Ensure you switch to the `develop` branch
-$ git checkout develop
-```
+    ```
+    $ git clone https://github.com/pyung/Python-Nigeria-Community-Site.git pncs
+    # Ensure you switch to the `develop` branch
+    $ git checkout develop
+    ```
 5. Create a virtual environment in the same directory as the root of the project
-```
-$ virtualenv -p `which python3.6` venv
-$ source venv/Scripts/activate      # on Linux or Mac **source venv/bin/activate**
-$ pip install -r requirements/local.txt
-```
+    ```
+    $ virtualenv -p `which python3.6` venv $ source venv/Scripts/activate # on Linux or Mac **source venv/bin/activate**
+    $ pip install -r requirements/local.txt
+    ```
 6. Create a database for the application
-```
-$ dcoker-compose -f local.yml up -d postgres mailhog
+    ```
+    $ docker-compose -f local.yml up -d postgres mailhog
 
-# Create a startup script file to load up all the environment variables that would be used
-$ nano .env         # for Linux or Mac Users
+    # Create a startup script file to load up all the environment variables that would be used
+    $ nano .env # for Linux or Mac Users
 
-# Run the .env script
-$ source .env
+    # Run the .env script $ source .env
 
-# Migrate all the settings
-$ python manage.py migrate
-```
+    # Migrate all the settings $ python manage.py migrate
+    ```
 7. Start the application
-```
-$ python manage.py runserver
-```
+    ```
+    $ python manage.py runserver
+    ```
 
 
 Basic Commands
