@@ -21,8 +21,8 @@ Moved to settings_.
 
 Setting up the repo for development
 -----------------------------------
-1. Ensure that you have Postgres installed on your system. Visit [Postgres Download Section](https://www.postgresql.org/download/) to download postgres for your respective operating system.
-2. Ensure you have `Python 3.6` installed by running the following in your terminal::
+1. Ensure that you have Postgres installed on your system. Visit Postgres Download Section (https://www.postgresql.org/download/) to download postgres for your respective operating system.
+2. Ensure you have ``Python 3.6`` installed by running the following in your terminal::
     
     $ python3 --version
     
