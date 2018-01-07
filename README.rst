@@ -46,9 +46,11 @@ Setting up the repo for development
     # Create a startup script file to load up all the environment variables that would be used
     $ nano .env # for Linux or Mac Users
 
-    # Run the .env script $ source .env
+    # Run the .env script 
+    $ source .env
 
-    # Migrate all the settings $ python manage.py migrate
+    # Migrate all the settings 
+    $ python manage.py migrate
     
 7. Start the application::
     
