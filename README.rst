@@ -35,7 +35,8 @@ Setting up the repo for development
     
 5. Create a virtual environment in the same directory as the root of the project::
     
-    $ virtualenv -p `which python3.6` venv $ source venv/Scripts/activate # on Linux or Mac **source venv/bin/activate**
+    $ virtualenv -p `which python3.6` venv 
+    $ source venv/Scripts/activate # on Linux or Mac *source venv/bin/activate*
     $ pip install -r requirements/local.txt
     
 6. Create a database for the application::
