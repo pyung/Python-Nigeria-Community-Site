@@ -1,7 +1,7 @@
 from django.db import models
 from django_prices.models import PriceField
 from django.utils.timezone import now
-
+from model_tools.util import TimeStampedModel
 
 class ProductManager(BaseUserManager, InheritanceManager):
     """Not sure we need a manager yet"""
@@ -17,8 +17,7 @@ class ProductGroup(models.Model):
         return self.group_name
 
 
-@python_2_unicode_compatible
-class Product(models.Model):
+class Product(models.Model, TimeStampedModel):
         product_name = models.CharField(_("Product name"), max_length=255, unique=True)
         product_code = models.CharField(_("Product code"), max_length=255, unique=True)
         unit_price = PriceField(_("Unit price"), currency='NGN', decimal_places=2, max_digits=12, default=0.00)
@@ -26,7 +25,6 @@ class Product(models.Model):
             help_text=_("Sample image used in the catalog's list view."))
         description = PlaceholderField("Commodity Details")
         group = models.ForeignKey(ProductGroup, on_delete=models.CASCADE, blank=True, null=True)
-        created_on = models.DateTimeField(default=now)
 
         objects = ProductManager()
 
