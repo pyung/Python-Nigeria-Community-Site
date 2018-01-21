@@ -1,0 +1,25 @@
+Collecting graphene-django
+  Downloading graphene_django-2.0.0-py2.py3-none-any.whl (52kB)
+Collecting graphene>=2.0 (from graphene-django)
+  Downloading graphene-2.0.1-py2.py3-none-any.whl (103kB)
+Collecting singledispatch>=3.4.0.3 (from graphene-django)
+  Using cached singledispatch-3.4.0.3-py2.py3-none-any.whl
+Collecting promise>=2.1 (from graphene-django)
+  Downloading promise-2.1.tar.gz
+Requirement already satisfied: Django>=1.8.0 in ./pyung_nigeria_community_site/lib/python3.5/site-packages (from graphene-django)
+Collecting iso8601 (from graphene-django)
+  Downloading iso8601-0.1.12-py3-none-any.whl
+Requirement already satisfied: six>=1.10.0 in ./pyung_nigeria_community_site/lib/python3.5/site-packages (from graphene-django)
+Collecting graphql-relay<1,>=0.4.5 (from graphene>=2.0->graphene-django)
+Collecting graphql-core<3,>=2.0 (from graphene>=2.0->graphene-django)
+  Downloading graphql_core-2.0-py2.py3-none-any.whl (202kB)
+Requirement already satisfied: typing in ./pyung_nigeria_community_site/lib/python3.5/site-packages (from promise>=2.1->graphene-django)
+Collecting rx>=1.6.0 (from graphql-core<3,>=2.0->graphene>=2.0->graphene-django)
+  Downloading Rx-1.6.0-py2.py3-none-any.whl (178kB)
+Building wheels for collected packages: promise
+  Running setup.py bdist_wheel for promise: started
+  Running setup.py bdist_wheel for promise: finished with status 'done'
+  Stored in directory: /home/lekanterragon/.cache/pip/wheels/bc/35/19/ac327f20881cd0bdd8fca94a60a7e1fdd631d8af55c6bd02a3
+Successfully built promise
+Installing collected packages: promise, rx, graphql-core, graphql-relay, graphene, singledispatch, iso8601, graphene-django
+Successfully installed graphene-2.0.1 graphene-django-2.0.0 graphql-core-2.0 graphql-relay-0.4.5 iso8601-0.1.12 promise-2.1 rx-1.6.0 singledispatch-3.4.0.3
