@@ -8,6 +8,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
 import environ
+import cloudinary
+
 
 ROOT_DIR = environ.Path(__file__) - 3  # (python_nigeria_site/config/settings/base.py - 3 = python_nigeria_site/)
 APPS_DIR = ROOT_DIR.path('python_nigeria_site')
@@ -50,6 +52,7 @@ THIRD_PARTY_APPS = [
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
     'graphene_django',
+    'cloudinary',
 ]
 
 # Apps specific for this project go here.
@@ -279,3 +282,14 @@ ADMIN_URL = r'^admin/'
 GRAPHENE = {
     'SCHEMA': 'python_nigeria_site.api.schema'
 }
+
+CLOUDINARY = {
+    'max_length': 200,
+}
+
+
+cloudinary.config(
+    cloud_name = env('CLOUDINARY_CLOUD_NAME', default=''),
+    api_key = env('CLOUDINARY_API_KEY', default=''), 
+    api_secret =  env('CLOUDINARY_API_SECRET', default='')
+)
