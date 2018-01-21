@@ -1,0 +1,45 @@
+version: '2'
+
+volumes:
+  postgres_data_local: {}
+  postgres_backup_local: {}
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    depends_on:
+      - postgres
+      - mailhog
+    volumes:
+      - .:/app
+    environment:
+      - POSTGRES_USER=python_nigeria_site
+      - USE_DOCKER=yes
+    ports:
+      - "8000:8000"
+    command: /start.sh
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/production/postgres/Dockerfile
+    volumes:
+      - postgres_data_local:/var/lib/postgresql/data
+      - postgres_backup_local:/backups
+    environment:
+      - DB_USER=python_nigeria_site
+      - DB_PASS=postgres
+      - DB_NAME=python_nigeria_site
+      - POSTGRES_USER=python_nigeria_site
+    ports:
+      - "7432:5432"
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+
+
