@@ -13,3 +13,4 @@ node_modules/
 .brackets.json
 .hg
 dist/
+venv/

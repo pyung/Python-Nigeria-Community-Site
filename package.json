@@ -40,8 +40,5 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "watchify": "^3.7.0"
-  },
-  "devDependencies": {
-    
   }
 }
