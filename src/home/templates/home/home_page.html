@@ -1,11 +1,40 @@
-{% extends "base.html" %}
+{% extends "base.html" %}{% load wagtailimages_tags wagtailcore_tags %}
 
-{% block body_class %}template-homepage{% endblock %}
-
+{% block body_class %}{% endblock %}
+{% block header %}{%endblock header %}
 {% block content %}
-    <h1>Welcome to your new Wagtail site!</h1>
+<!-- Container (Landing Section) -->
+<div id="landing">
+    {% include "includes/header.html" with parent=site_root calling_page=self %}
+    <section class="container-fluid text-center">
+      <div class="jumbotron">
+        <h1 class="full">PYTHO<span class="greenText">N</span> <span class="greenText">N</span>IGERIA</h1>
+        <br /><br />
+        <p>The Python Programming Language User Group in Nigeria.
+        </p>
+        <br /><br />
+        <h4>Join us on</h4>
+        <div>
+          <a href="https://py-slack-invite.herokuapp.com/" target="_blank">
+            <button class="siteBtn">SLACK</button>
+          </a>
+          <span>AND</span>
+          <a href="https://mail.python.org/mailman/listinfo/python-nigeria" target="_blank">
+            <button class="siteBtn">OUR MAILING LIST</button>
+          </a>
+        </div>
+        <br /><br />
+    
+      </div>
+    </section>
+</div>
+<!-- Basic information about site -->
+<section id="about" class="container-fluid">
+  <div class="central-content">
+    <div class="row">
+      {{page.body}}
 
-    <p>You can access the admin interface <a href="{% url 'wagtailadmin_home' %}">here</a> (make sure you have run "./manage.py createsuperuser" in the console first).</p>
-
-    <p>If you haven't already given the documentation a read, head over to <a href="http://docs.wagtail.io/">http://docs.wagtail.io</a> to start building on Wagtail</p>
+    </div>
+  </div>
+</section>
 {% endblock %}

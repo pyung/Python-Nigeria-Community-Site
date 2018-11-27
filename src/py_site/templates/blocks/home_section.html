@@ -1,0 +1,20 @@
+{% load wagtailimages_tags static navigation_tags %}
+<article class="col-sm-6">
+<header class="header-content">
+    <div class="icon-wrap">
+    {% if self.icon|startswith:"fa" %}
+     <div class="icon-wrap">
+    <span><i class="fa {{self.icon}} fa-2x icon"></i></span>
+    </div>
+    {% else %}
+    <img class="header-icon" src="{% static 'images/pythonBlack.svg' %}" alt="About Python Nigeria" width="50px">
+    {% endif %}
+    <h3><strong>{{self.heading}}</strong></h3>
+    </div>
+</header>
+<p>{{self.content}}</p>
+{% if self.link %}
+    <a href="{{self.link}}" class="contentBtn">View</a>
+
+{% endif %}
+</article>

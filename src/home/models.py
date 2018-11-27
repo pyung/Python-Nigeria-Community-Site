@@ -1,7 +1,6 @@
 from django.db import models
 
-from wagtail.core.models import Page
+from base.models import AbstractPage
 
-
-class HomePage(Page):
+class HomePage(AbstractPage):
     pass

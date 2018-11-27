@@ -18,20 +18,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/py_site.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body {% block body_class %}{% endblock %}>
         {% wagtailuserbar %}
+        {% block header %}
+            {# Header contains the main_navigation block #}
+            {% include "includes/header.html" with parent=site_root calling_page=self %}
+        {% endblock header %}
 
         {% block content %}{% endblock %}
 
         {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/py_site.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery-1.12.0.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
