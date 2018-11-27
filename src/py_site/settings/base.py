@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+    'bakery',
+    'wagtailbakery',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -161,3 +163,9 @@ WAGTAIL_SITE_NAME = "py_site"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+BUILD_DIR = os.path.join(BASE_DIR, "..","build")
+
+BAKERY_VIEWS = (
+	'wagtailbakery.views.AllPublishedPagesView',
+)
