@@ -21,6 +21,13 @@ class SectionBlock(StructBlock):
         template = "blocks/home_section.html"
         classname = 'section-block col-sm-6'
 
+class LinkBlock(StructBlock):
+    url = URLBlock()
+    icon = TextBlock()
+
+    class Meta:
+        template = "blocks/footer_section.html"
 
 class BaseStreamBlock(StreamBlock):
     section_blocks = SectionBlock()
+    link = LinkBlock()

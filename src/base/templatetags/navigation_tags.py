@@ -1,7 +1,7 @@
 from django import template
 
 from wagtail.core.models import Page
-
+from ..models import FooterText
 # from bakerydemo.base.models import FooterText
 
 
@@ -68,3 +68,13 @@ def startswith(text, starts):
     if isinstance(text, str):
         return text.startswith(starts)
     return False
+
+@register.inclusion_tag('includes/footer_text.html', takes_context=True)
+def get_footer_text(context):
+    footer_text = None
+    if FooterText.objects.first() is not None:
+        footer_text = FooterText.objects.first()
+
+    return {
+        'footer_text': footer_text,
+    }

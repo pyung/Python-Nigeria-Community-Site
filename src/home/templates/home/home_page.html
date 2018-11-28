@@ -1,4 +1,4 @@
-{% extends "base.html" %}{% load wagtailimages_tags wagtailcore_tags %}
+{% extends "base.html" %}{% load wagtailimages_tags wagtailcore_tags navigation_tags %}
 
 {% block body_class %}{% endblock %}
 {% block header %}{%endblock header %}
@@ -37,4 +37,5 @@
     </div>
   </div>
 </section>
+            {% get_footer_text %}
 {% endblock %}
