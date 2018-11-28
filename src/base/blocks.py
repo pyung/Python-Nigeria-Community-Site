@@ -28,6 +28,15 @@ class LinkBlock(StructBlock):
     class Meta:
         template = "blocks/footer_section.html"
 
+class ProjectBlock(StructBlock):
+    link = URLBlock()
+    summary = TextBlock()
+
+    class Meta:
+        template = "blocks/project_section.html"
+
 class BaseStreamBlock(StreamBlock):
     section_blocks = SectionBlock()
     link = LinkBlock()
+    project_link = ProjectBlock()
+    paragraph = RichTextBlock(template="blocks/paragraph_block.html")

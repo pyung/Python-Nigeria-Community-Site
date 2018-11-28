@@ -1,0 +1,48 @@
+{% extends "page.html" %}
+{% load wagtailcore_tags navigation_tags wagtailimages_tags %}
+
+{% block content %}
+<div class="container" style="background: white;">
+
+<div class="row" >
+
+<div class="main col-md-10 col-sm-12">
+    <!-- page-title start -->
+    <!-- ================ -->
+    <h1 class="page-title">Our projects</h1>
+    <div class="separator-2" style="font-size: 1.1em">{{page.introduction}}</div>
+    <!-- page-title end -->
+    <p class="lead"></p>
+    {% for project in projects %}
+    <div class="image-box style-3-b">
+        <div class="row">            
+            <div class="col-sm-12">
+                <div class="body">
+                   <h3 class="title"><a href="{% pageurl project %}">{{project.name}}</a></h3>
+                     <p class="small mb-10"><strong>Start Date:</strong><i class="icon-calendar"></i> {% if project.start_date %}{{project.start_date}}{% else %}To be Communicated {% endif %}
+                    <div class="separator-2"></div>
+                    <div class="description mb-10">{{project.description}}</div>
+                    {{project.links}}
+                </div>
+            </div>
+        </div>
+    </div>    
+    {% endfor %}
+    {% if projects.paginator.count > 1 %}
+    <nav class="" style="margin-top: 20px">
+        <ul class="hidden pagination">
+            <li><a href="#" aria-label="Previous"><i class="fa fa-angle-left"></i></a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#" aria-label="Next"><i class="fa fa-angle-right"></i></a></li>
+        </ul>
+    </nav>
+    
+    {% endif %}
+</div>
+</div>
+</div>
+{% endblock content %}

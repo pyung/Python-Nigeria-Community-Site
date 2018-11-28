@@ -8,7 +8,7 @@ from wagtail.admin.edit_handlers import (
     StreamFieldPanel,
 )
 from wagtail.core import blocks
-from wagtail.core.fields import StreamField
+from wagtail.core.fields import StreamField, RichTextField
 from wagtail.core.models import Page
 from wagtail.snippets.models import register_snippet
 
@@ -16,9 +16,6 @@ from .blocks import BaseStreamBlock
 
 # Create your models here.
 
-@register_snippet
-class Project(models.Model):
-    pass
 
 @register_snippet
 class FooterText(models.Model):
@@ -28,19 +25,18 @@ class FooterText(models.Model):
     accessible on the template via a template tag defined in base/templatetags/
     navigation_tags.py
     """
-    heading = models.CharField(max_length=255,blank=True)
-    body = StreamField(BaseStreamBlock(),verbose_name="Body")
 
-    panels = [
-        FieldPanel('heading'),
-        StreamFieldPanel('body'),
-    ]
+    heading = models.CharField(max_length=255, blank=True)
+    body = StreamField(BaseStreamBlock(), verbose_name="Body")
+
+    panels = [FieldPanel("heading"), StreamFieldPanel("body")]
 
     def __str__(self):
         return "Footer text"
 
     class Meta:
-        verbose_name_plural = 'Footer Text'
+        verbose_name_plural = "Footer Text"
+
 
 class AbstractPage(Page):
     body = StreamField(
@@ -51,3 +47,7 @@ class AbstractPage(Page):
         abstract = True
 
     content_panels = Page.content_panels + [StreamFieldPanel("body")]
+
+
+class StandardPage(AbstractPage):
+    pass

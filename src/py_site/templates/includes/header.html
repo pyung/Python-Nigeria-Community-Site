@@ -1,6 +1,6 @@
 {% load navigation_tags static %}
 
-<nav class="navbar {% block nav_class %}navbar-default{% endblock nav_class %}  ">
+<nav class="navbar {% block nav_class %}{{nav_class}}{% endblock nav_class %}  ">
     <div class="container">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -18,6 +18,7 @@
     {% block main_navigation %}
         <ul class="nav navbar-nav navbar-right nav-items text-center">
         {# main_menu is defined in base/templatetags/navigation_tags.py #}
+        <li><a href="/#about">About</a></li>
         {% get_site_root as site_root %}
         {% top_menu parent=site_root calling_page=self %}
         </ul>
