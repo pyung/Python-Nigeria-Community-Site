@@ -1,0 +1,58 @@
+{% extends "page.html" %}
+{% load wagtailcore_tags wagtailimages_tags navigation_tags wagtailimages_tags %}
+
+{% block content %}
+{% if page.image %}
+    {% image page.image fill-1920x600 as image %}
+    <div class="container-fluid hero" style="background-image:url('{{ image.url }}')">
+    <div class="hero-gradient-mask"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                        <p class="stand-first">{{ page.subtitle }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>{{ page.title }}</h1>
+                {% if page.subtitle %}
+                    <p class="stand-first">{{ page.subtitle }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+<div class="container" style="background: white;">
+
+    <div class="row">
+        <div class="main col-md-10 col-sm-12">
+            <h1 class="title">{{page.name}}</h1>
+            <div class="separator-2"></div>
+             {% if page.date_published %}
+                        <div class="blog-byline">
+                            {{ page.date_published }}
+                        </div>
+                    {% endif %}
+            <div class="description">
+
+            {{page.body}}
+             {% if page.get_tags %}
+                    Tagged with:<br />
+                    {% for tag in page.get_tags  %}
+                        <a href="{{ tag.url }}" class="btn btn-sm">{{ tag }}</a>
+                    {% endfor %}
+                {% endif %}
+            </div>            
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

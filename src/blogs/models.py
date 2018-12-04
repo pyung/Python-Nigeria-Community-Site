@@ -117,8 +117,6 @@ class BlogPageTag(TaggedItemBase):
     http://docs.wagtail.io/en/latest/reference/pages/model_recipes.html#tagging
     """
 
-    bakery_view = "bakerydemo.blog.views.BlogPageTagStatic"
-
     content_object = ParentalKey(
         "BlogPage", related_name="tagged_items", on_delete=models.CASCADE
     )
@@ -133,7 +131,6 @@ class BlogPage(Page):
     http://docs.wagtail.io/en/latest/topics/pages.html#inline-models
     """
 
-    bakery_view = "bakerydemo.blog.views.BlogPostStatic"
     introduction = models.TextField(help_text="Text to describe the page", blank=True)
     image = models.ForeignKey(
         "wagtailimages.Image",
@@ -205,8 +202,6 @@ class BlogIndexPage(RoutablePageMixin, Page):
     RoutablePageMixin is used to allow for a custom sub-URL for the tag views
     defined above.
     """
-
-    bakery_view = "bakerydemo.blog.views.BlogIndexStatic"
 
     introduction = models.TextField(help_text="Text to describe the page", blank=True)
     image = models.ForeignKey(

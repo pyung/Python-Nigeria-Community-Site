@@ -312,3 +312,5 @@ python_nigeria_site/media/
 frontend/node_modules
 startup.sh
 venv3
+staticdirs
+media
