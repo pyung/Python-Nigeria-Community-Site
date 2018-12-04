@@ -1,0 +1,2 @@
+web: gunicorn py_site.wsgi --chdir src
+# web: python manage.py runserver
