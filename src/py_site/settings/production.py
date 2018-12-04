@@ -2,8 +2,9 @@ from .base import *
 import environ
 
 env = environ.Env()
-DEBUG = False
+DEBUG = True
 
+ALLOWED_HOSTS = ['arcane-ocean-27558.herokuapp.com']
 try:
     from .local import *
 except ImportError:
@@ -21,3 +22,4 @@ MIDDLEWARE = ["whitenoise.middleware.WhiteNoiseMiddleware"] + MIDDLEWARE
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+SECRET_KEY=env('SECRET_KEY')
