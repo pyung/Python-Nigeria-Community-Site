@@ -1,6 +1,18 @@
 {% extends "page.html" %}
 {% load wagtailcore_tags navigation_tags wagtailimages_tags %}
-
+{% block extra_css %}
+{{block.super}}
+<style>
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #101010;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}</style>
+{% endblock extra_css %}
 {% block content %}
 
 <div class="container" style="background: white;">
